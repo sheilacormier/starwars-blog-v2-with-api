@@ -1,10 +1,16 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import DetailStats from "../component/detailstats";
 
 export const Details = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+
+	const detailsID = params.detailsID;
+	const planetsID = params.planetsID;
+	const starshipsID = params.starshipsID;
+
 	const [type, setType] = useState();
 
 	return (

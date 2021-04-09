@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	return (
 		<nav className="navbar navbar-dark bg-dark pb-3">
 			<Link to="/">
@@ -16,29 +17,32 @@ export const Navbar = () => {
 				</span>
 			</Link>
 			<div className="ml-auto">
-				<button
-					className="btn btn-warning dropdown-toggle"
-					type="button"
-					id="dropdownMenuButton"
-					data-toggle="dropdown"
-					aria-haspopup="true"
-					aria-expanded="false">
-					Favorites{" "}
-					<span className="badge badge-secondary">
-						{/* count favorites
-						 */}
-					</span>
-				</button>
-				<div className="dropdown-menu dropdown-menu-right">
-					<button className="dropdown-item" type="button">
-						Action
+				<div className="dropdown">
+					<button
+						className="btn btn-warning dropdown-toggle"
+						type="button"
+						id="dropdownMenuButton"
+						data-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false">
+						Favorites
 					</button>
-					<button className="dropdown-item" type="button">
-						Another action
-					</button>
-					<button className="dropdown-item" type="button">
-						Something else here
-					</button>
+					<div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+						{store.favorites.length > 0 ? (
+							store.favorites.map((item, index) => {
+								return (
+									<a className="dropdown-item" href="#" key={index}>
+										{item.name}
+										<span className="float-right" onClick={() => actions.removeFavorite(index)}>
+											<i className="fas fa-trash-alt"></i>
+										</span>
+									</a>
+								);
+							})
+						) : (
+							<li className="text-center">empty</li>
+						)}
+					</div>
 				</div>
 			</div>
 		</nav>
