@@ -10,13 +10,14 @@ export const Home = () => {
 		<div className="background">
 			<h2 className="header">CHARACTERS</h2>
 			<div className="row cardrow mx-auto">
-				{store.characters.map((item, index) => {
+				{store.characters.map((characters, index) => {
 					return (
 						<div className="col-lg-2 col-12 mb-2" key={index}>
 							<div className="card mx-auto" style={{ width: "18rem" }}>
-								<img src={item.image} className="card-img-top" alt="..." />
+								<img src="http://placehold.jp/250x250.png" className="card-img-top" alt="..." />
 								<div className="card-body">
-									<h5 className="card-title">{item.name}</h5>
+									<h5 className="card-title">{characters.name}</h5>
+
 									<Link to="/details" className="btn btn-dark">
 										Learn more!
 									</Link>
@@ -31,14 +32,14 @@ export const Home = () => {
 			</div>
 			<h2 className="header">PLANETS</h2>
 			<div className="row cardrow mx-auto">
-				{store.planets.map((item, index) => {
+				{store.planets.map((planets, index) => {
 					return (
 						<div className="col-lg-2 col-12 mb-2" key={index}>
 							<div className="card mx-auto" style={{ width: "18rem" }}>
-								<img src={item.image} className="card-img-top" alt="..." />
+								<img src="http://placehold.jp/250x250.png" className="card-img-top" alt="..." />
 								<div className="card-body">
-									<h5 className="card-title">{item.name}</h5>
-									<Link to="/details" className="btn btn-dark">
+									<h5 className="card-title">{planets.name}</h5>
+									<Link to="/planets" className="btn btn-dark">
 										Learn more!
 									</Link>
 									<button href="#" className="btn btn-warning float-right">
@@ -52,14 +53,14 @@ export const Home = () => {
 			</div>
 			<h2 className="header">STARTSHIPS</h2>
 			<div className="row cardrow mx-auto">
-				{store.starships.map((item, index) => {
+				{store.starships.map((starships, index) => {
 					return (
 						<div className="col-lg-2 col-12 mb-2" key={index}>
 							<div className="card mx-auto" style={{ width: "18rem" }}>
-								<img src={item.image} className="card-img-top" alt="..." />
+								<img src="http://placehold.jp/250x250.png" className="card-img-top" alt="..." />
 								<div className="card-body">
-									<h5 className="card-title">{item.name}</h5>
-									<Link to="/details" className="btn btn-dark">
+									<h5 className="card-title">{starships.name}</h5>
+									<Link to="/starships" className="btn btn-dark">
 										Learn more!
 									</Link>
 									<button href="#" className="btn btn-warning float-right">

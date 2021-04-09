@@ -5,6 +5,8 @@ import { Context } from "../store/appContext";
 export const Details = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	const [type, setType] = useState();
+
 	return (
 		<div className="detailsbg">
 			<div className="container mt-5 mb-5">
@@ -19,7 +21,7 @@ export const Details = () => {
 					<div className="col detailsdescription pt-4">
 						<h3 className="detailsname">LUKE SKYWALKER</h3>
 						<p>
-							simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
 							industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of
 							type and scrambled it to make a type specimen book. It has survived not only five centuries,
 							but also the leap into electronic typesetting, remaining essentially unchanged.

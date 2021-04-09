@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
 	return (
@@ -24,10 +25,21 @@ export const Navbar = () => {
 					aria-expanded="false">
 					Favorites{" "}
 					<span className="badge badge-secondary">
-						{/* return actions.countFavorites
+						{/* count favorites
 						 */}
 					</span>
 				</button>
+				<div className="dropdown-menu dropdown-menu-right">
+					<button className="dropdown-item" type="button">
+						Action
+					</button>
+					<button className="dropdown-item" type="button">
+						Another action
+					</button>
+					<button className="dropdown-item" type="button">
+						Something else here
+					</button>
+				</div>
 			</div>
 		</nav>
 	);
