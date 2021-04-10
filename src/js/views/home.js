@@ -12,13 +12,17 @@ export const Home = () => {
 			<div className="row cardrow mx-auto">
 				{store.person.map((item, index) => {
 					return (
-						<div className="col-lg-2 col-12 mb-2" key={index}>
+						<div className="col-lg-2 col-md-6 col-sm-12 col-xs-12" key={index}>
 							<div className="card mx-auto" style={{ width: "18rem" }}>
-								<img src="http://placehold.jp/250x250.png" className="card-img-top" alt="..." />
+								<img
+									src="http://placehold.jp/250x250.png"
+									className="card-img-top img-fluid"
+									alt="..."
+								/>
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>
 
-									<Link to="/details" className="btn btn-dark">
+									<Link to={`/person/${index}`} className="btn btn-dark">
 										Learn more!
 									</Link>
 									<button
@@ -37,12 +41,16 @@ export const Home = () => {
 			<div className="row cardrow mx-auto">
 				{store.planets.map((item, index) => {
 					return (
-						<div className="col-lg-2 col-12 mb-2" key={index}>
+						<div className="col-lg-2 col-md-6 col-sm-12 col-xs-12" key={index}>
 							<div className="card mx-auto" style={{ width: "18rem" }}>
-								<img src="http://placehold.jp/250x250.png" className="card-img-top" alt="..." />
+								<img
+									src="http://placehold.jp/250x250.png"
+									className="card-img-top img-fuild"
+									alt="..."
+								/>
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>
-									<Link to="/planets" className="btn btn-dark">
+									<Link to={`/planets/${index}`} className="btn btn-dark">
 										Learn more!
 									</Link>
 									<button
@@ -61,12 +69,16 @@ export const Home = () => {
 			<div className="row cardrow mx-auto">
 				{store.starships.map((item, index) => {
 					return (
-						<div className="col-lg-2 col-12 mb-2" key={index}>
+						<div className="col-lg-3 col-md-6 col-sm-12 col-xs-12" key={index}>
 							<div className="card mx-auto" style={{ width: "18rem" }}>
-								<img src="http://placehold.jp/250x250.png" className="card-img-top" alt="..." />
+								<img
+									src="http://placehold.jp/250x250.png"
+									className="card-img-top img-fuild"
+									alt="..."
+								/>
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>
-									<Link to="/starships" className="btn btn-dark">
+									<Link to={`/starships/${index}`} className="btn btn-dark">
 										Learn more!
 									</Link>
 									<button

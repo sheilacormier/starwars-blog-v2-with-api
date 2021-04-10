@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -21,7 +21,7 @@ export const PlanetStats = props => {
 				<div className="col text-center detailsheader">CLIMATE</div>
 				<div className="col text-center detailsheader">TERRAIN</div>
 			</div>
-			{typeof person !== "undefined" && (
+			{typeof planets !== "undefined" && (
 				<div className="row row mb-5 detailspadding">
 					<div className="col text-center detailsattributes">{planets.diameter}</div>
 					<div className="col text-center detailsattributes">{planets.rotation_period}</div>

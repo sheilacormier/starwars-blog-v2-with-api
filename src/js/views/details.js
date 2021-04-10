@@ -17,16 +17,16 @@ export const Details = props => {
 
 	useEffect(() => {
 		if (typeof personID !== "undefined") {
-			setType("characters");
+			setType("person");
 		} else if (typeof planetID !== "undefined") {
 			setType("planets");
 		} else {
 			setType("starships");
 		}
-	}, []);
+	}, [personID, planetID, starshipID]);
 
 	useEffect(() => {
-		if (type === "characters") {
+		if (type === "person") {
 			setCurrentID(personID);
 		} else if (type === "planets") {
 			setCurrentID(planetID);
@@ -61,7 +61,7 @@ export const Details = props => {
 								</Link>
 							</div>
 						</div>
-						{type === "characters" && <DetailStats data={store.characters[currentID]} />}
+						{type === "person" && <DetailStats data={store.person[currentID]} />}
 						{type === "planets" && <PlanetStats data={store.planets[currentID]} />}
 						{type === "starships" && <StarshipStats data={store.starships[currentID]} />}
 					</>

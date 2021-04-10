@@ -5,8 +5,6 @@ import injectContext from "./store/appContext";
 
 import { Home } from "./views/home";
 import { Details } from "./views/details";
-import { Planets } from "./views/planets";
-import { Starships } from "./views/starships";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";

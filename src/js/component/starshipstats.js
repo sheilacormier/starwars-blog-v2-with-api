@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -8,7 +8,7 @@ export const StarshipStats = props => {
 	useEffect(() => {
 		fetch(`https://www.swapi.tech/api/starships/${props.data.uid}`)
 			.then(res => res.json())
-			.then(data => setStarship(data.result.properties));
+			.then(data => setStarships(data.result.properties));
 	}, [props.data]);
 
 	return (
@@ -21,7 +21,7 @@ export const StarshipStats = props => {
 				<div className="col text-center detailsheader">PASSENGERS</div>
 				<div className="col text-center detailsheader">MGLT</div>
 			</div>
-			{typeof person !== "undefined" && (
+			{typeof starships !== "undefined" && (
 				<div className="row row mb-5 detailspadding">
 					<div className="col text-center detailsattributes">{starships.model}</div>
 					<div className="col text-center detailsattributes">{starships.starship_class}</div>
