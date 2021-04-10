@@ -4,6 +4,16 @@ import { Context } from "../store/appContext";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
+
+	const getLink = item => {
+		if (store.planets.indexOf(item) !== -1) {
+			return `/planets/${store.planets.indexOf(item)}`;
+		} else if (store.person.indexOf(item) !== -1) {
+			return `/person/${store.person.indexOf(item)}`;
+		} else {
+			return `/starships/${store.starships.indexOf(item)}`;
+		}
+	};
 	return (
 		<nav className="navbar navbar-dark bg-dark pb-3">
 			<Link to="/">
@@ -25,18 +35,25 @@ export const Navbar = () => {
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false">
-						Favorites
+						Favorites{" "}
+						<span className="badge badge-secondary">
+							<Context.Consumer>
+								{({ actions }) => {
+									return actions.countFavorites();
+								}}
+							</Context.Consumer>
+						</span>
 					</button>
 					<div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
 						{store.favorites.length > 0 ? (
 							store.favorites.map((item, index) => {
 								return (
-									<a className="dropdown-item" href="#" key={index}>
+									<Link className="dropdown-item" to={() => getLink(item)} key={index}>
 										{item.name}
 										<span className="float-right" onClick={() => actions.removeFavorite(index)}>
 											<i className="fas fa-trash-alt"></i>
 										</span>
-									</a>
+									</Link>
 								);
 							})
 						) : (

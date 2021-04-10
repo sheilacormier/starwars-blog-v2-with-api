@@ -10,7 +10,7 @@ export const Home = () => {
 		<div className="background">
 			<h2 className="header">CHARACTERS</h2>
 			<div className="row cardrow mx-auto">
-				{store.characters.map((item, index) => {
+				{store.person.map((item, index) => {
 					return (
 						<div className="col-lg-2 col-12 mb-2" key={index}>
 							<div className="card mx-auto" style={{ width: "18rem" }}>

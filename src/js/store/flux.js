@@ -2,7 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	const base_url = "https://www.swapi.tech/api";
 	return {
 		store: {
-			characters: [],
+			person: [],
 			planets: [],
 			starships: [],
 			favorites: []
@@ -14,7 +14,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			initialize: () => {
 				fetch(`${base_url}/people`)
 					.then(res => res.json())
-					.then(data => setStore({ characters: data.results }));
+					.then(data => setStore({ person: data.results }));
 
 				fetch(`${base_url}/planets`)
 					.then(res => res.json())
@@ -37,10 +37,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 			removeFavorite: index => {
 				//get the store
 				const store = getStore();
-				//and pushes data
+				//and filter data
 				let favorites = store.favorites.filter((item, i) => i !== index);
 				//reset the global store
 				setStore({ favorites: favorites });
+			},
+
+			countFavorites: () => {
+				//get the store
+				const store = getStore();
+				//and count data
+				const length = store.favorites.length;
+				//return results
+				return length;
 			},
 
 			changeColor: (index, color) => {
