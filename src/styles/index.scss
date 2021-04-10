@@ -1,24 +1,16 @@
 @media (max-width: 576px) {  
 }
-
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width:768px) {  
-
-}
- 
+@media (min-width: 576px) and (max-width:768px) {
+} 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) and (max-width:992px) {  
-
-}
- 
+} 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width:1200px) { 
-
-}
- 
+@media (min-width: 992px) and (max-width:1200px) {
+} 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-
+@media (min-width: 1200px) {
 }
 
 .background, .detailsbg {
@@ -73,17 +65,10 @@ h2.header {
     box-sizing: border-box;
 }
 
-h3.detailsname{
-    font-family: DIN, Helvetica, Arial, sans-serif;    
-    color: white;
-    font-size: 1.4em;
-    letter-spacing: 0.03em;
-}
-
-.detailsdescription {
-    background-color: rgb(75, 75, 75);
-    font-size: 15px;
-    color: white;
+.detailsimage {
+    width: 100%;
+    height:auto;
+    object-fit: cover;
 }
 
 .detailsheader {
@@ -92,14 +77,42 @@ h3.detailsname{
     color: white;
 }
 
+h3.detailsname{
+    font-family: DIN, Helvetica, Arial, sans-serif;    
+    color: white;
+    font-size: 1.4em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.detailsdescription {
+    background-color: rgb(75, 75, 75);
+    font-size: 15px;
+    color: white;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/shared/bg_hash_top-dca2c5ab1b2e.png);
+    background-size: 7px;
+    background-repeat: repeat-x;
+    background-position: top left; 
+    width: 30% !important;    
+}
+
 .detailsattributes {
     font-family: DIN, Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: white;
+    margin-top: 15px;    
 }
 
 .detailspadding {
     padding-bottom: 118px;
+}
+
+hr{ 
+    border: none;
+    border-left: 1px solid white;
+    height: 10vh;
+    width: 1px;
+    margin: auto;     
 }
 
 .footerbg {

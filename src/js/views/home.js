@@ -69,7 +69,7 @@ export const Home = () => {
 			<div className="row cardrow mx-auto">
 				{store.starships.map((item, index) => {
 					return (
-						<div className="col-lg-3 col-md-6 col-sm-12 col-xs-12" key={index}>
+						<div className="col-lg-2 col-md-6 col-sm-12 col-xs-12" key={index}>
 							<div className="card mx-auto" style={{ width: "18rem" }}>
 								<img
 									src="http://placehold.jp/250x250.png"

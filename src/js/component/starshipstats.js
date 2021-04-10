@@ -13,22 +13,47 @@ export const StarshipStats = props => {
 
 	return (
 		<div className="container mt-5 mb-5">
-			<div className="row mb-3 mt-4">
-				<div className="col text-center detailsheader">MODEL</div>
-				<div className="col text-center detailsheader">STARSHIP CLASS</div>
-				<div className="col text-center detailsheader">LENGHT</div>
-				<div className="col text-center detailsheader">CREW</div>
-				<div className="col text-center detailsheader">PASSENGERS</div>
-				<div className="col text-center detailsheader">MGLT</div>
-			</div>
 			{typeof starships !== "undefined" && (
 				<div className="row row mb-5 detailspadding">
-					<div className="col text-center detailsattributes">{starships.model}</div>
-					<div className="col text-center detailsattributes">{starships.starship_class}</div>
-					<div className="col text-center detailsattributes">{starships.length}</div>
-					<div className="col text-center detailsattributes">{starships.crew}</div>
-					<div className="col text-center detailsattributes">{starships.passengers}</div>
-					<div className="col text-center detailsattributes">{starships.MGLT}</div>
+					<div className="col text-center">
+						<span className="detailsheader">MODEL</span>
+						<p className="detailsattributes">{starships.model}</p>
+					</div>
+					<div>
+						<hr />
+					</div>
+					<div className="col text-center">
+						<span className="detailsheader">STARSHIP CLASS</span>
+						<p className="detailsattributes">{starships.starship_class}</p>
+					</div>
+					<div>
+						<hr />
+					</div>
+					<div className="col text-center">
+						<span className="detailsheader">LENGHT</span>
+						<p className="detailsattributes">{starships.length}</p>
+					</div>
+					<div>
+						<hr />
+					</div>
+					<div className="col text-center">
+						<span className="detailsheader">CREW</span>
+						<p className="detailsattributes">{starships.crew}</p>
+					</div>
+					<div>
+						<hr />
+					</div>
+					<div className="col text-center">
+						<span className="detailsheader">PASSENGERS</span>
+						<p className="detailsattributes">{starships.passengers}</p>
+					</div>
+					<div>
+						<hr />
+					</div>
+					<div className="col text-center">
+						<span className="detailsheader">MGLT</span>
+						<p className="detailsattributes">{starships.MGLT}</p>
+					</div>
 				</div>
 			)}
 		</div>

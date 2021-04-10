@@ -13,22 +13,47 @@ export const DetailStats = props => {
 
 	return (
 		<div className="container mt-5 mb-5">
-			<div className="row mb-3 mt-4">
-				<div className="col text-center detailsheader">BIRTH YEAR</div>
-				<div className="col text-center detailsheader">GENDER</div>
-				<div className="col text-center detailsheader">HEIGHT</div>
-				<div className="col text-center detailsheader">MASS</div>
-				<div className="col text-center detailsheader">SKIN COLOR</div>
-				<div className="col text-center detailsheader">EYE COLOR</div>
-			</div>
 			{typeof person !== "undefined" && (
 				<div className="row row mb-5 detailspadding">
-					<div className="col text-center detailsattributes">{person.birth_year}</div>
-					<div className="col text-center detailsattributes">{person.gender}</div>
-					<div className="col text-center detailsattributes">{person.height}</div>
-					<div className="col text-center detailsattributes">{person.mass}</div>
-					<div className="col text-center detailsattributes">{person.skin_color}</div>
-					<div className="col text-center detailsattributes">{person.eye_color}</div>
+					<div className="col text-center">
+						<span className="detailsheader">BIRTH YEAR</span>
+						<p className="detailsattributes">{person.birth_year}</p>
+					</div>
+					<div>
+						<hr />
+					</div>
+					<div className="col text-center">
+						<span className="detailsheader">GENDER</span>
+						<p className="detailsattributes">{person.gender}</p>
+					</div>
+					<div>
+						<hr />
+					</div>
+					<div className="col text-center">
+						<span className="detailsheader">HEIGHT</span>
+						<p className="detailsattributes">{person.height}</p>
+					</div>
+					<div>
+						<hr />
+					</div>
+					<div className="col text-center">
+						<span className="detailsheader">MASS</span>
+						<p className="detailsattributes">{person.mass}</p>
+					</div>
+					<div>
+						<hr />
+					</div>
+					<div className="col text-center">
+						<span className="detailsheader">HAIR COLOR</span>
+						<p className="detailsattributes">{person.hair_color}</p>
+					</div>
+					<div>
+						<hr />
+					</div>
+					<div className="col text-center">
+						<span className="detailsheader">EYE COLOR</span>
+						<p className="detailsattributes">{person.eye_color}</p>
+					</div>
 				</div>
 			)}
 		</div>
