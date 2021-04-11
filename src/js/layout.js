@@ -4,7 +4,9 @@ import ScrollToTop from "./component/scrollToTop";
 import injectContext from "./store/appContext";
 
 import { Home } from "./views/home";
-import { Details } from "./views/details";
+import { People } from "./views/people";
+import { Planets } from "./views/planets";
+import { Starships } from "./views/starships";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -25,13 +27,13 @@ const Layout = () => {
 							<Home />
 						</Route>
 						<Route exact path="/person/:personID">
-							<Details />
+							<People />
 						</Route>
 						<Route exact path="/planets/:planetID">
-							<Details />
+							<Planets />
 						</Route>
 						<Route exact path="/starships/:starshipID">
-							<Details />
+							<Starships />
 						</Route>
 						<Route>
 							<h1>Page Not found!</h1>
