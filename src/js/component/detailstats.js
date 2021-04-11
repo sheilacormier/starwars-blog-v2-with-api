@@ -14,45 +14,45 @@ export const DetailStats = props => {
 	return (
 		<div className="container mt-5 mb-5">
 			{typeof person !== "undefined" && (
-				<div className="row row mb-5 detailspadding">
+				<div className="row row mb-5 attributespadding">
 					<div className="col text-center">
-						<span className="detailsheader">BIRTH YEAR</span>
-						<p className="detailsattributes">{person.birth_year}</p>
+						<span className="attributesheader">BIRTH YEAR</span>
+						<p className="attributesdetails">{person.birth_year}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">GENDER</span>
-						<p className="detailsattributes">{person.gender}</p>
+						<span className="attributesheader">GENDER</span>
+						<p className="attributesdetails">{person.gender}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">HEIGHT</span>
-						<p className="detailsattributes">{person.height}</p>
+						<span className="attributesheader">HEIGHT</span>
+						<p className="attributesdetails">{person.height}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">MASS</span>
-						<p className="detailsattributes">{person.mass}</p>
+						<span className="attributesheader">MASS</span>
+						<p className="attributesdetails">{person.mass}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">HAIR COLOR</span>
-						<p className="detailsattributes">{person.hair_color}</p>
+						<span className="attributesheader">HAIR COLOR</span>
+						<p className="attributesdetails">{person.hair_color}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">EYE COLOR</span>
-						<p className="detailsattributes">{person.eye_color}</p>
+						<span className="attributesheader">EYE COLOR</span>
+						<p className="attributesdetails">{person.eye_color}</p>
 					</div>
 				</div>
 			)}

@@ -39,15 +39,15 @@ export const Details = props => {
 	// }, [type]);
 
 	return (
-		<div className="detailsbg">
-			<div className="container mt-5 mb-5">
+		<div className="content-wrapper detailsbg">
+			<div className="container">
 				{typeof type !== "undefined" && typeof currentID !== "undefined" && store[type].length > 0 && (
 					<>
-						<div className="row justify-content-lg-center">
-							<div className="col-sm-8 mx-lg-n5">
-								<img src="http://placehold.jp/2000x1270.png" className="detailsimage" />
+						<div className="row no-gutters">
+							<div className="col-12 col-lg-7 align-self-center">
+								<img src="http://placehold.jp/500x300.png" className="detailsimage rounded" />
 							</div>
-							<div className="col-sm-4 detailsdescription pt-4">
+							<div className="col-12 col-lg-5 p-3 p-xl-4 detailsdescription">
 								<h3 className="detailsname">{store[type][currentID].name}</h3>
 								<p>
 									Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the

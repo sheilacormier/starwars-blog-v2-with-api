@@ -14,45 +14,45 @@ export const PlanetStats = props => {
 	return (
 		<div className="container mt-5 mb-5">
 			{typeof planets !== "undefined" && (
-				<div className="row row mb-5 detailspadding">
+				<div className="row row mb-5 attributespadding">
 					<div className="col text-center">
-						<span className="detailsheader">DIAMETER</span>
-						<p className="detailsattributes">{planets.diameter}</p>
+						<span className="attributesheader">DIAMETER</span>
+						<p className="attributesdetails">{planets.diameter}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">ROTATION PERIOD</span>
-						<p className="detailsattributes">{planets.rotation_period}</p>
+						<span className="attributesheader">ROTATION PERIOD</span>
+						<p className="attributesdetails">{planets.rotation_period}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">GRAVITY</span>
-						<p className="detailsattributes">{planets.gravity}</p>
+						<span className="attributesheader">GRAVITY</span>
+						<p className="attributesdetails">{planets.gravity}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">POPULATION</span>
-						<p className="detailsattributes">{planets.population}</p>
+						<span className="attributesheader">POPULATION</span>
+						<p className="attributesdetails">{planets.population}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">CLIMATE</span>
-						<p className="detailsattributes">{planets.climate}</p>
+						<span className="attributesheader">CLIMATE</span>
+						<p className="attributesdetails">{planets.climate}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">TERRAIN</span>
-						<p className="detailsattributes">{planets.terrain}</p>
+						<span className="attributesheader">TERRAIN</span>
+						<p className="attributesdetails">{planets.terrain}</p>
 					</div>
 				</div>
 			)}

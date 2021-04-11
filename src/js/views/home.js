@@ -12,8 +12,8 @@ export const Home = () => {
 			<div className="row cardrow mx-auto">
 				{store.person.map((item, index) => {
 					return (
-						<div className="col-lg-2 col-md-6 col-sm-12 col-xs-12" key={index}>
-							<div className="card mx-auto" style={{ width: "18rem" }}>
+						<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
+							<div className="card m-auto" style={{ width: "18rem" }}>
 								<img
 									src="http://placehold.jp/250x250.png"
 									className="card-img-top img-fluid"
@@ -41,8 +41,8 @@ export const Home = () => {
 			<div className="row cardrow mx-auto">
 				{store.planets.map((item, index) => {
 					return (
-						<div className="col-lg-2 col-md-6 col-sm-12 col-xs-12" key={index}>
-							<div className="card mx-auto" style={{ width: "18rem" }}>
+						<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
+							<div className="card m-auto" style={{ width: "18rem" }}>
 								<img
 									src="http://placehold.jp/250x250.png"
 									className="card-img-top img-fuild"
@@ -69,8 +69,8 @@ export const Home = () => {
 			<div className="row cardrow mx-auto">
 				{store.starships.map((item, index) => {
 					return (
-						<div className="col-lg-2 col-md-6 col-sm-12 col-xs-12" key={index}>
-							<div className="card mx-auto" style={{ width: "18rem" }}>
+						<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
+							<div className="card m-auto" style={{ width: "18rem" }}>
 								<img
 									src="http://placehold.jp/250x250.png"
 									className="card-img-top img-fuild"

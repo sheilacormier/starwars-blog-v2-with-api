@@ -14,45 +14,45 @@ export const StarshipStats = props => {
 	return (
 		<div className="container mt-5 mb-5">
 			{typeof starships !== "undefined" && (
-				<div className="row row mb-5 detailspadding">
+				<div className="row row mb-5 attributespadding">
 					<div className="col text-center">
-						<span className="detailsheader">MODEL</span>
-						<p className="detailsattributes">{starships.model}</p>
+						<span className="attributesheader">MODEL</span>
+						<p className="attributesdetails">{starships.model}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">STARSHIP CLASS</span>
-						<p className="detailsattributes">{starships.starship_class}</p>
+						<span className="attributesheader">STARSHIP CLASS</span>
+						<p className="attributesdetails">{starships.starship_class}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">LENGHT</span>
-						<p className="detailsattributes">{starships.length}</p>
+						<span className="attributesheader">LENGHT</span>
+						<p className="attributesdetails">{starships.length}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">CREW</span>
-						<p className="detailsattributes">{starships.crew}</p>
+						<span className="attributesheader">CREW</span>
+						<p className="attributesdetails">{starships.crew}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">PASSENGERS</span>
-						<p className="detailsattributes">{starships.passengers}</p>
+						<span className="attributesheader">PASSENGERS</span>
+						<p className="attributesdetails">{starships.passengers}</p>
 					</div>
 					<div>
 						<hr />
 					</div>
 					<div className="col text-center">
-						<span className="detailsheader">MGLT</span>
-						<p className="detailsattributes">{starships.MGLT}</p>
+						<span className="attributesheader">MGLT</span>
+						<p className="attributesdetails">{starships.MGLT}</p>
 					</div>
 				</div>
 			)}
