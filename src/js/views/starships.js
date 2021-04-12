@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
-import { DetailStats } from "../component/detailstats";
+import { PeopleStats } from "../component/peoplestats";
 import { PlanetStats } from "../component/planetstats";
 import { StarshipStats } from "../component/starshipstats";
 
@@ -30,7 +30,7 @@ export const Starships = props => {
 
 	return (
 		<div className="content-wrapper detailsbg">
-			<div className="container">
+			<div className="container mt-5">
 				{typeof type !== "undefined" && typeof currentID !== "undefined" && store[type].length > 0 && (
 					<>
 						<div className="row no-gutters">

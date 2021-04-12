@@ -15,7 +15,7 @@ export const Navbar = () => {
 		}
 	};
 	return (
-		<nav className="navbar navbar-dark bg-dark pb-3">
+		<nav className="navbar sticky-top navbar-dark bg-dark pb-3">
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1">
 					<img

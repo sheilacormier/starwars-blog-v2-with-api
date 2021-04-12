@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 
-export const DetailStats = props => {
+export const PeopleStats = props => {
 	const [person, setPerson] = useState(undefined);
 	useEffect(() => {
 		fetch(`https://www.swapi.tech/api/people/${props.data.uid}`)
@@ -60,6 +60,6 @@ export const DetailStats = props => {
 	);
 };
 
-DetailStats.propTypes = {
+PeopleStats.propTypes = {
 	data: PropTypes.object.isRequired
 };
