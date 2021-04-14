@@ -5,6 +5,7 @@ import { Context } from "../store/appContext";
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 
+    //start of favorites click to return to details
 	const getLink = item => {
 		if (store.planets.indexOf(item) !== -1) {
 			return `/planets/${store.planets.indexOf(item)}`;
@@ -13,7 +14,8 @@ export const Navbar = () => {
 		} else {
 			return `/starships/${store.starships.indexOf(item)}`;
 		}
-	};
+    };
+    //end of favorites click to return to details
 	return (
 		<nav className="navbar sticky-top navbar-dark bg-dark pb-3">
 			<Link to="/">
