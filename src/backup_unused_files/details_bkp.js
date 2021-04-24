@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Context } from "../store/appContext";
+import { Context } from "../js/store/appContext";
 import PropTypes from "prop-types";
 import { DetailStats } from "../component/detailstats";
-import { PlanetStats } from "../component/planetstats";
-import { StarshipStats } from "../component/starshipstats";
+import { PlanetStats } from "../js/component/planetstats";
+import { StarshipStats } from "../js/component/starshipstats";
 
 export const Details = props => {
 	const { store, actions } = useContext(Context);
@@ -28,7 +28,6 @@ export const Details = props => {
 		}
 	}, [personID, planetID, starshipID]);
 
-
 	return (
 		<div className="content-wrapper detailsbg">
 			<div className="container">
@@ -36,9 +35,12 @@ export const Details = props => {
 					<>
 						<div className="row no-gutters">
 							<div className="col-12 col-lg-7 align-self-center">
-								<img src="http://placehold.jp/500x300.png" className="detailsimage rounded" />
+								<img
+									src="https://www.nme.com/wp-content/uploads/2021/01/markhamill-lukeskywalker-2000x1270-1.jpg"
+									className="detailsimage rounded"
+								/>
 							</div>
-							<div className="col-12 col-lg-5 p-3 p-xl-4 detailsdescription">
+							<div className="col-12 col-lg-5 p-3 p-xl-4 detailsdescription detailsborder">
 								<h3 className="detailsname">{store[type][currentID].name}</h3>
 								<p>
 									Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -50,12 +52,14 @@ export const Details = props => {
 								<Link to="/">
 									<button className="btn btn-warning">Back home</button>
 								</Link>
+								<img
+									className="details-icon"
+									src="https://starwarsblog.starwars.com/wp-content/uploads/2017/08/swblog-author-swcom-bb8-C.png"
+								/>
 							</div>
 						</div>
 
 						{type === "person" && <DetailStats data={store.person[currentID]} />}
-						{type === "planets" && <PlanetStats data={store.planets[currentID]} />}
-						{type === "starships" && <StarshipStats data={store.starships[currentID]} />}
 					</>
 				)}
 			</div>
