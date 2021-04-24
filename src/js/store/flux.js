@@ -1,5 +1,5 @@
 const getState = ({ getStore, getActions, setStore }) => {
-	const base_url = "https://www.swapi.tech/api";
+	const base_url = "https://3000-blue-flamingo-n4irecdp.ws-us03.gitpod.io";
 	return {
 		store: {
 			person: [],
@@ -9,20 +9,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
-			// Use getActions to call a function within a fuction
+			// Use getActions to call a function within a function
 
 			initialize: () => {
 				fetch(`${base_url}/people`)
 					.then(res => res.json())
-					.then(data => setStore({ person: data.results }));
+					.then(data => setStore({ person: data.people }));
 
 				fetch(`${base_url}/planets`)
 					.then(res => res.json())
-					.then(data => setStore({ planets: data.results }));
+					.then(data => setStore({ planet: data.planet }));
 
 				fetch(`${base_url}/starships`)
 					.then(res => res.json())
-					.then(data => setStore({ starships: data.results }));
+					.then(data => setStore({ starship: data.starship }));
 			},
 
 			addFavorite: data => {
@@ -51,22 +51,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//return results
 				return length;
 			}
-
-			//this is for the demo view
-			// changeColor: (index, color) => {
-			//get the store
-			// const store = getStore();
-
-			//we have to loop the entire demo array to look for the respective index
-			//and change its color
-			// const demo = store.demo.map((elm, i) => {
-			// 	if (i === index) elm.background = color;
-			// 	return elm;
-			// });
-
-			//reset the global store
-			// setStore({ demo: demo });
-			// }
 		}
 	};
 };

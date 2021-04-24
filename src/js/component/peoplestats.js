@@ -4,12 +4,12 @@ import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export const PeopleStats = props => {
-	const [person, setPerson] = useState(undefined);
-	useEffect(() => {
-		fetch(`https://www.swapi.tech/api/people/${props.data.uid}`)
-			.then(res => res.json())
-			.then(data => setPerson(data.result.properties));
-	}, [props.data]);
+	const [person, setPerson] = useState(props.data);
+	// useEffect(() => {
+	// 	fetch(`https://www.swapi.tech/api/people/${props.data.uid}`)
+	// 		.then(res => res.json())
+	// 		.then(data => setPerson(data.result.properties));
+	// }, [props.data]);
 
 	return (
 		<div className="container mt-5 mb-5">
@@ -53,6 +53,13 @@ export const PeopleStats = props => {
 					<div className="col text-center">
 						<span className="attributesheader">EYE COLOR</span>
 						<p className="attributesdetails">{person.eye_color}</p>
+					</div>
+					<div>
+						<hr />
+					</div>
+					<div className="col text-center">
+						<span className="attributesheader">HOMEWORLD</span>
+						<p className="attributesdetails">{person.homeworld}</p>
 					</div>
 				</div>
 			)}

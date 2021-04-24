@@ -35,10 +35,7 @@ export const People = props => {
 					<>
 						<div className="row no-gutters">
 							<div className="col-12 col-lg-7 align-self-center">
-								<img
-									src="https://www.nme.com/wp-content/uploads/2021/01/markhamill-lukeskywalker-2000x1270-1.jpg"
-									className="detailsimage rounded"
-								/>
+								<img src={store.person[currentID].photo_url} className="detailsimage rounded" />
 							</div>
 							<div className="col-12 col-lg-5 p-3 p-xl-4 detailsdescription detailsborder">
 								<h3 className="detailsname">{store[type][currentID].name}</h3>

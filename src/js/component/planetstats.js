@@ -4,12 +4,12 @@ import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export const PlanetStats = props => {
-	const [planets, setPlanets] = useState(undefined);
-	useEffect(() => {
-		fetch(`https://www.swapi.tech/api/planets/${props.data.uid}`)
-			.then(res => res.json())
-			.then(data => setPlanets(data.result.properties));
-	}, [props.data]);
+	const [planets, setPlanets] = useState(props.data);
+	// useEffect(() => {
+	// 	fetch(`https://www.swapi.tech/api/planets/${props.data.uid}`)
+	// 		.then(res => res.json())
+	// 		.then(data => setPlanets(data.result.properties));
+	// }, [props.data]);
 
 	return (
 		<div className="container mt-5 mb-5">
