@@ -35,7 +35,7 @@ export const Starships = props => {
 					<>
 						<div className="row no-gutters">
 							<div className="col-12 col-lg-7 align-self-center">
-								<img src="http://placehold.jp/500x300.png" className="detailsimage" />
+								<img src={store.starships[currentID].photo_url} className="detailsimage rounded" />
 							</div>
 
 							<div className="col-12 col-lg-5 p-3 p-xl-4 detailsdescription detailsborder">

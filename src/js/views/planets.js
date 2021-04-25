@@ -35,7 +35,7 @@ export const Planets = props => {
 					<>
 						<div className="row no-gutters">
 							<div className="col-12 col-lg-7 align-self-center">
-								<img src={store.planet[currentID].photo_url} className="detailsimage rounded" />
+								<img src={store.planets[currentID].photo_url} className="detailsimage rounded" />
 							</div>
 							<div className="col-12 col-lg-5 p-3 p-xl-4 detailsdescription detailsborder">
 								<h3 className="detailsname">{store[type][currentID].name}</h3>

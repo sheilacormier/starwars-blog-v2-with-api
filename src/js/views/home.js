@@ -15,7 +15,11 @@ export const Home = () => {
 					return (
 						<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
 							<div className="card m-auto" style={{ width: "18rem" }}>
-								<img src={item.photo_url} className="card-img-top" alt="..." />
+								<img
+									src={item.photo_url}
+									className="card-img-top img-responsive w-100"
+									alt="person picture"
+								/>
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>
 									<Link to={`/person/${index}`} className="btn btn-dark">
@@ -40,9 +44,9 @@ export const Home = () => {
 						<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
 							<div className="card m-auto" style={{ width: "18rem" }}>
 								<img
-									src="http://placehold.jp/250x250.png"
-									className="card-img-top img-fuild"
-									alt="..."
+									src={item.photo_url}
+									className="card-img-top img-responsive w-100"
+									alt="planet picture"
 								/>
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>
@@ -68,9 +72,9 @@ export const Home = () => {
 						<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
 							<div className="card m-auto" style={{ width: "18rem" }}>
 								<img
-									src="http://placehold.jp/250x250.png"
-									className="card-img-top img-fuild"
-									alt="..."
+									src={item.photo_url}
+									className="card-img-top img-responsive w-100"
+									alt="starship picture"
 								/>
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>

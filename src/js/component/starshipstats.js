@@ -4,12 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export const StarshipStats = props => {
-	const [starships, setStarships] = useState(undefined);
-	useEffect(() => {
-		fetch(`https://www.swapi.tech/api/starships/${props.data.uid}`)
-			.then(res => res.json())
-			.then(data => setStarships(data.result.properties));
-	}, [props.data]);
+	const [starships, setStarships] = useState(props.data);
 
 	return (
 		<div className="container mt-5 mb-5">

@@ -5,11 +5,6 @@ import PropTypes from "prop-types";
 
 export const PeopleStats = props => {
 	const [person, setPerson] = useState(props.data);
-	// useEffect(() => {
-	// 	fetch(`https://www.swapi.tech/api/people/${props.data.uid}`)
-	// 		.then(res => res.json())
-	// 		.then(data => setPerson(data.result.properties));
-	// }, [props.data]);
 
 	return (
 		<div className="container mt-5 mb-5">
