@@ -18,11 +18,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				fetch(`${base_url}/planets`)
 					.then(res => res.json())
-					.then(data => setStore({ planet: data.planet }));
+					.then(data => setStore({ planets: data.planets }));
 
 				fetch(`${base_url}/starships`)
 					.then(res => res.json())
-					.then(data => setStore({ starship: data.starship }));
+					.then(data => setStore({ starships: data.starships }));
 			},
 
 			addFavorite: data => {

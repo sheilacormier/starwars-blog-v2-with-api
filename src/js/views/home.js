@@ -5,6 +5,7 @@ import { Context } from "../store/appContext";
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	const [currentID, setCurrentID] = useState(undefined);
 
 	return (
 		<div className="background">
@@ -14,14 +15,9 @@ export const Home = () => {
 					return (
 						<div className="col-12 col-md-6 col-lg-4 col-xl p-2" key={index}>
 							<div className="card m-auto" style={{ width: "18rem" }}>
-								<img
-									src="http://placehold.jp/250x250.png"
-									className="card-img-top img-fluid"
-									alt="..."
-								/>
+								<img src={item.photo_url} className="card-img-top" alt="..." />
 								<div className="card-body">
 									<h5 className="card-title">{item.name}</h5>
-
 									<Link to={`/person/${index}`} className="btn btn-dark">
 										Learn more!
 									</Link>
