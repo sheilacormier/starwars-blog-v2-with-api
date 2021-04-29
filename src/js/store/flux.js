@@ -1,5 +1,5 @@
 const getState = ({ getStore, getActions, setStore }) => {
-	const base_url = "https://3000-blue-flamingo-n4irecdp.ws-us03.gitpod.io";
+	const base_url = "https://starwars-blog-api.herokuapp.com";
 	return {
 		store: {
 			person: [],
