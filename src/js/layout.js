@@ -19,7 +19,7 @@ const Layout = () => {
 
 	return (
 		<div className="d-flex flex-column">
-			<BrowserRouter basename={basename}>
+			<HashRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
@@ -41,7 +41,7 @@ const Layout = () => {
 					</Switch>
 					<Footer />
 				</ScrollToTop>
-			</BrowserRouter>
+			</HashRouter>
 		</div>
 	);
 };
